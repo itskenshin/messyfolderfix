@@ -15,9 +15,8 @@
 * ext_exe = ['.exe']
 * ext_zips = ['.zip','.rar']
 
-## a esta variable le pasas tu propia ruta por ejempplo esta es mi ruta donde esta la carpeta downloads ruta_descarga = r'C:\\Users\\Kenshin\Downloads\\'
-
-
+* A esta variable le pasas tu propia ruta por ejemplo esta es mi ruta donde esta la carpeta downloads ---> ruta_descarga = r'C:\\Users\\Kenshin\Downloads\\'
+* Luego necesitas crear carpetas a tu gusto en mi caso cree 6 carpetas (Texto,video,Foto,etc...)
 
 
 
