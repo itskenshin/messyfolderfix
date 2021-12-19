@@ -36,6 +36,7 @@
 * ext_exe = ['.exe']
 * ext_zips = ['.zip', '. rar']
 
+<br>
 * You pass your own path to this variable, for example this is my path where the downloads folder is ---> path_download = r'C: \\ Users \\ Kenshin \ Downloads \\ '
 * Then you need to create folders to your liking in my case create 6 folders (Text, video, Photo, etc ...)
 
