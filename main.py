@@ -47,6 +47,10 @@ def ordenar(archivo,ext):
                 if ext == i:
                     shutil.move(ruta_descarga + archivo, ruta_descarga + "exe")
 
+            for i in ext_foto:
+                if ext == i:
+                    shutil.move(ruta_descarga + archivo, ruta_descarga + "Fotos")
+
             for i in ext_zips:
                 if ext == i:
                     shutil.move(ruta_descarga + archivo, ruta_descarga + "zip-rar")
