@@ -2,9 +2,10 @@ import os
 import shutil
 # ruta donde va buscar los archivos
 # route download folder
-ruta_descarga = r'C:\\Users\\Kenshin\Downloads\\'
+home= os.path.expanduser('~')
+ruta_descarga = os.path.exists(f'{home}\Downloads\\') if os.path.exists(f'{home}\Downloads\\') else os.makedir(f'{home}\Downloads\\')
 
-# extensiones
+# Extensiones
 ext_texto = ['.docx','.txt','.doc','.pdf','.pptx']
 ext_foto = ['.png','.jpg','.jpeg','.pdf','.gif']
 ext_video = ['.mov','.mp4']
