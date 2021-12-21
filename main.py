@@ -3,8 +3,13 @@ import shutil
 # ruta donde va buscar los archivos
 # route download folder
 home= os.path.expanduser('~')
-ruta_descarga = os.path.exists(f'{home}\Downloads\\') if os.path.exists(f'{home}\Downloads\\') else os.makedir(f'{home}\Downloads\\')
-
+# addding route/ agregando ruta
+ruta_descarga = ""
+if os.path.exists(f'{home}\Downloads\\'):
+    ruta_descarga = f'{home}\Downloads\\'
+else:
+    os.makedir(f'{home}\Downloads\\')
+    ruta_descarga = f'{home}\Downloads\\'
 # Extensiones
 ext_texto = ['.docx','.txt','.doc','.pdf','.pptx']
 ext_foto = ['.png','.jpg','.jpeg','.pdf','.gif']
