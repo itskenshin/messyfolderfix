@@ -34,30 +34,58 @@ def ordenar(archivo,ext):
                 if ext == i:
                     # aqui mueve el archivo de la ruta a la carpeta(Texto) de la ruta NOTA:puedes crear diferentes carpetas
                     # here move the file from the path to the folder (Text) from the path note:you can create different folders
-                    shutil.move(ruta_descarga + archivo,ruta_descarga+ 'Texto')
+                    if os.path.exists(ruta_descarga+ 'Texto'):
+                        shutil.move(ruta_descarga + archivo,ruta_descarga+ 'Texto')
+                    else:
+                        os.mkdir(ruta_descarga+ 'Texto')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'Texto')
             for i in ext_video:
                 if ext == i:
-                    shutil.move(ruta_descarga + archivo, ruta_descarga + "video")
+                    if os.path.exists(ruta_descarga + 'video'):
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'video')
+                    else:
+                        os.mkdir(ruta_descarga + 'video')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'video')
 
             for i in ext_musica:
                 if ext == i:
-                    shutil.move(ruta_descarga + archivo, ruta_descarga + "musica")
+                    if os.path.exists(ruta_descarga + 'musica'):
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'musica')
+                    else:
+                        os.mkdir(ruta_descarga + 'musica')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'musica')
 
             for i in ext_exe:
                 if ext == i:
-                    shutil.move(ruta_descarga + archivo, ruta_descarga + "exe")
+                    if os.path.exists(ruta_descarga + 'exe'):
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'exe')
+                    else:
+                        os.mkdir(ruta_descarga + 'exe')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'exe')
 
             for i in ext_foto:
                 if ext == i:
-                    shutil.move(ruta_descarga + archivo, ruta_descarga + "Fotos")
+                    if os.path.exists(ruta_descarga + 'Fotos'):
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'Fotos')
+                    else:
+                        os.mkdir(ruta_descarga + 'Fotos')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'Fotos')
 
             for i in ext_zips:
                 if ext == i:
-                    shutil.move(ruta_descarga + archivo, ruta_descarga + "zip-rar")
+                    if os.path.exists(ruta_descarga + 'zip-rar'):
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'zip-rar')
+                    else:
+                        os.mkdir(ruta_descarga + 'zip-rar')
+                        shutil.move(ruta_descarga + archivo, ruta_descarga + 'zip-rar')
             # si no encuentra ninguna de la extensiones lo guarda en la carpeta others
             # if it does not find any of the extensions it saves it in the others folder
             if ext != "":
-                shutil.move(ruta_descarga + archivo, ruta_descarga + "others")
+                if os.path.exists(ruta_descarga + 'others'):
+                    shutil.move(ruta_descarga + archivo, ruta_descarga + 'others')
+                else:
+                    os.mkdir(ruta_descarga + 'others')
+                    shutil.move(ruta_descarga + archivo, ruta_descarga + 'others')
         except Exception as e:
             print(e)
 
